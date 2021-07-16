@@ -4,8 +4,7 @@
       v-model="search"
       label="Buscar"
       placeholder="Search"      
-      hide-details="auto"      
-      @change="getSearch(search)"
+      hide-details="auto"            
     ></v-text-field>    
   </div>
 </template>
@@ -17,24 +16,15 @@ export default {
     data() {
       return{
         search:'',
-
-
-
       }
     },
 
-    methods:{
-      getSearch(search){
-        console.log('Se buscara según lo escrito '+search );
+    watch:{
+      search(){
+        this.$store.state.cardnamesearch = this.search; 
       }
-
-    }
-
-
-
-    
-
-    
+    },
+  
 }
 </script>
 

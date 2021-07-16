@@ -1,23 +1,34 @@
 <template>
     <div>
         <v-img
-            height="250"
+            
             :src="imageUrl" :alt="name"
         >
         </v-img>
         <v-card-title>
             {{name}} 
+            
         </v-card-title>
+        <v-flex mt-4 mb-3>
+                <MoreDetails :name='name' :imageUrl='imageUrl' :text='text'/>
+            </v-flex>
+      
     </div>
   
 </template>
 
 <script>
+import MoreDetails from '../modals/MoreDetails';
+
 export default {
     name:'Carta',
+    components: {
+        MoreDetails,
+    },
     props:{
         name:String,
         imageUrl:String,
+        text:String,
     },
 
     data(){
@@ -32,6 +43,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+img {
+    width: 90%;
 
+}
 </style>
