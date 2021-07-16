@@ -15,5 +15,5 @@ yarn serve
 yarn build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Julio 2021  
+Este reto consiste en crear una aplicación en Vue.js o Nuxt.js, que se conecte a la API pública de "Magic The Gathering" para listar las cartas existentes.

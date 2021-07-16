@@ -1,18 +1,44 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <TitleBar titulo="Magic The Gathering"/>
+    
+    <Cartas :miscartas="miscartas"/>
+    
+    
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+  import TitleBar from '../components/titlebar/TitleBar.vue';
+  
+  import Cartas from '../components/cartas/Cartas.vue';
+  const miscartas = require('../data/dataSucursal1.json');
+  
+  
+
+ 
+
+  export default {
+    name: 'Home',
+   
+    components: { 
+      TitleBar,
+      
+      Cartas,      
+    },
+
+    data(){
+      return{
+        miscartas,
+        
+      
+        
+      }
+      
+    }
+
+
+
   }
-}
 </script>
