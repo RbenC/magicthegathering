@@ -15,5 +15,5 @@ yarn serve
 yarn build
 ```
 
-Julio 2021  
-Este reto consiste en crear una aplicación en Vue.js o Nuxt.js, que se conecte a la API pública de "Magic The Gathering" para listar las cartas existentes.
+Jul 2021  
+This challenge consists of creating an application in Vue.js or Nuxt.js, which connects to the public API of "Magic The Gathering" to list the existing cards.

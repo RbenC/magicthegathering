@@ -2,11 +2,11 @@
     <div>
         <v-img
             height="250"
-            :src="imagen" :alt="nombre"
+            :src="imageUrl" :alt="name"
         >
         </v-img>
         <v-card-title>
-            {{nombre}} ${{precio}} {{unidad}}
+            {{name}} 
         </v-card-title>
     </div>
   
@@ -16,10 +16,8 @@
 export default {
     name:'Carta',
     props:{
-        nombre:String,
-        imagen:String,
-        precio:Number,
-        unidad:String,
+        name:String,
+        imageUrl:String,
     },
 
     data(){

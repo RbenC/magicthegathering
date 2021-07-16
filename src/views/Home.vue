@@ -2,7 +2,7 @@
   <div>
     <TitleBar titulo="Magic The Gathering"/>
     
-    <Cartas :miscartas="miscartas"/>
+    <Cartas />
     
     
   </div>
@@ -11,11 +11,21 @@
 <script>
 
   import TitleBar from '../components/titlebar/TitleBar.vue';
-  
   import Cartas from '../components/cartas/Cartas.vue';
-  const miscartas = require('../data/dataSucursal1.json');
+
+  
+  import { getCards } from '../configuration/APIconexion';
+  getCards();
   
   
+
+  // const cartas = require('../data/dataCards.json');
+  // const veamos = Object.values(cartas);
+  // const thecards= veamos[0]
+  // const deckOfCards = thecards.filter((element)=>{
+  //   return element.multiverseid
+  // })
+
 
  
 
@@ -29,8 +39,8 @@
     },
 
     data(){
-      return{
-        miscartas,
+      return{       
+        
         
       
         

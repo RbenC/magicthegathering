@@ -2,12 +2,13 @@
 <div>
     <SearchBar/>
     <v-layout :wrap="true">
-        <v-flex v-for="(item,index) in miscartas" :key="index" md3  >
+        <v-flex v-for="(item,index) in deckOfCards" :key="index" sm4  >
             <v-card
-                class="mx-auto my-6"
-                max-width="375"                
+                class="mx-6 my-6"
+                max-width="300"
+                v-if="item.multiverseid"        
             >                
-            <Carta  :nombre='item.nombre' :imagen='item.imagen' :precio='item.precio' :unidad='item.unidad'/>
+            <Carta  :name='item.name' :imageUrl='item.imageUrl' v-if="item.multiverseid"/>
             </v-card>
         </v-flex>
     </v-layout>
@@ -22,24 +23,26 @@ import SearchBar from '../../components/searchbar/SearchBar.vue';
 
 export default {
     name:'Cartas',
-    props:{
-        miscartas:Array,        
-    },
+    // props:{
+    //     deckOfCards:Array,        
+    // },
     components: {
         Carta,
         SearchBar,
+
         
     },
-
     data(){
-
         return{
 
-            
-
-
+        
         }
 
+    },
+    computed:{
+        deckOfCards(){
+            return this.$store.getters.sendData; 
+        }
     },
     methods: {
         filtrar(){
