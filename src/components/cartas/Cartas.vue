@@ -7,7 +7,7 @@
                 class="mx-6 my-6"
                 max-width=auto                      
             >                
-            <Carta  :name='item.name' :imageUrl='item.imageUrl' :text='item.text' />
+            <Carta  :name='item.name' :imageUrl='item.imageUrl' :text='item.text' :id='item.multiverseid'/>
             </v-card>
         </v-flex>
     </v-layout>

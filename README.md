@@ -17,3 +17,8 @@ yarn build
 
 Jul 2021  
 This challenge consists of creating an application in Vue.js or Nuxt.js, which connects to the public API of "Magic The Gathering" to list the existing cards.
+
+#  Vista preliminar 
+
+
+![Preview](./public/application.png)

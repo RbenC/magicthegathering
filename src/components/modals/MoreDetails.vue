@@ -1,15 +1,14 @@
 <template>
   <div class="text-center">
-    <v-dialog v-model="dialog" width="600">
+    <v-dialog v-model="dialog" width="600">      
       <template v-slot:activator="{ on }">
-        <v-btn class="success" dark v-on="on">More...</v-btn>
+          <v-btn class="success" dark v-on="on">More...</v-btn>
       </template>
       <v-card>
-        <v-card-title class="headline grey lighten-2 center" primary-title>{{name}}</v-card-title>
-        <v-img
-            center
-            
-            :src="imageUrl" :alt="name"
+        <v-card-title class="headline grey lighten-2" primary-title>{{name}}</v-card-title>
+        <v-img                       
+            :src="imageUrl" 
+            :alt="name"
         >
         </v-img>
         <p>{{text}}</p>
@@ -35,9 +34,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
-.center{
-    margin-right:auto;
-}
 </style>

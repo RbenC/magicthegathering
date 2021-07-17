@@ -1,8 +1,10 @@
 <template>
-  <v-app>    
-      <v-container>
+  <v-app>
+      <v-container >
       <v-main>
-        <router-view/>
+        
+          <router-view/>          
+        
       </v-main>
       </v-container>
   </v-app>
@@ -18,3 +20,6 @@ export default {
   }),
 };
 </script>
+<style lang="scss">
+  
+</style>

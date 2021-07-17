@@ -1,8 +1,9 @@
 <template>
     <div>
-        <v-img
+        <v-img class="image"
             
             :src="imageUrl" :alt="name"
+            @click="ira(id)"
         >
         </v-img>
         <v-card-title>
@@ -10,9 +11,8 @@
             
         </v-card-title>
         <v-flex mt-4 mb-3>
-                <MoreDetails :name='name' :imageUrl='imageUrl' :text='text'/>
-            </v-flex>
-      
+                <MoreDetails :name='name' :imageUrl='imageUrl' :text='text' :id='id'/>
+            </v-flex>      
     </div>
   
 </template>
@@ -29,23 +29,28 @@ export default {
         name:String,
         imageUrl:String,
         text:String,
+        id:String
     },
 
-    data(){
+   data(){
         return{
 
 
         }
 
-    }
-
+    },
+    methods:{
+        ira(id){                 
+            this.$router.push(`card/${id}`)
+            
+        }
+    },
 
 }
 </script>
 
 <style lang="scss" scoped>
-img {
-    width: 90%;
-
+.image {
+    cursor: pointer;
 }
 </style>
